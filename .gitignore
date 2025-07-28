@@ -1,0 +1,34 @@
+# --- Nuxt build & cache ---
+.output/
+.nuxt/
+.nitro/
+.cache/
+dist/
+.data/
+
+# --- Node.js ---
+node_modules/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- macOS ---
+.DS_Store
+
+# --- JetBrains (WebStorm, PhpStorm и др.) ---
+.idea/
+.fleet/
+
+# --- Environment variables ---
+.env
+.env.*
+!.env.example
+
+# --- System junk ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Yarn ---
+yarn-error.log
