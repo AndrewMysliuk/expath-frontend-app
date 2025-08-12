@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center h-full w-full bg-orange-100 px-4 py-8">
     <h1 class="text-3xl sm:text-4xl font-semibold text-gray-900 text-center mb-6">Economic Pulse</h1>
-    <PulseIndicator status="EXCELLENT" />
+    <PulseIndicator />
   </div>
 </template>
 

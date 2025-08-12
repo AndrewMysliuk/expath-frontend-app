@@ -1,6 +1,6 @@
 <template>
   <div class="w-full rounded-2xl border border-gray-200 bg-white p-2">
-    <canvas ref="canvasEl" class="block w-full rounded-xl" style="height: 220px"></canvas>
+    <canvas ref="canvasEl" class="block w-full rounded-xl" style="height: 220px" />
   </div>
 </template>
 
