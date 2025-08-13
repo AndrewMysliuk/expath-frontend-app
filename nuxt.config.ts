@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/scss/main.scss"],
 
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
 
   components: {
     loader: false,

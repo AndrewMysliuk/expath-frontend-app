@@ -1,0 +1,1089 @@
+{
+  "date": "2025-08-12",
+  "countries": {
+    "BR": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 15,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-BRINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 15,
+        "unit": "RATE_PCT",
+        "status": "CRITICAL"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 5.23,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-BRIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 5.23,
+        "unit": "PERCENT",
+        "status": "MODERATE"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 5.8,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-BRUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 5.8,
+        "unit": "PERCENT",
+        "status": "EXCELLENT"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 47.3,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-BRBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 47.3,
+        "unit": "INDEX",
+        "status": "WARNING"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 137913.68,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/BMFBOVESPA-IBOV/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 137913.68,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "BRL/EUR",
+          "value": 0.15854,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLEUR/",
+          "source_name": "BRLEUR"
+        },
+        {
+          "pair": "BRL/JPY",
+          "value": 27.371,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLJPY/",
+          "source_name": "BRLJPY"
+        },
+        {
+          "pair": "BRL/GBP",
+          "value": 0.13706,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLGBP/",
+          "source_name": "BRLGBP"
+        },
+        {
+          "pair": "BRL/CNY",
+          "value": 1.3294,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLCNY/",
+          "source_name": "BRLCNY"
+        },
+        {
+          "pair": "BRL/INR",
+          "value": 16.215,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLINR/",
+          "source_name": "BRLINR"
+        },
+        {
+          "pair": "BRL/USD",
+          "value": 0.1849,
+          "as_of": "2025-08-12T21:24:07Z",
+          "source_url": "https://www.tradingview.com/symbols/BRLUSD/",
+          "source_name": "BRLUSD"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 13.731,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-BR10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 13.731,
+        "unit": "PERCENT",
+        "status": "DANGER"
+      }
+    },
+    "CN": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 3,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-CNINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 3,
+        "unit": "RATE_PCT",
+        "status": "MODERATE"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 0,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-CNIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 0,
+        "unit": "PERCENT",
+        "status": "WARNING"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 5,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-CNUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 5,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 49.3,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-CNBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 49.3,
+        "unit": "INDEX",
+        "status": "WARNING"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 3665.9177,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/SSE-000001/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 3665.9177,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "CNY/GBP",
+          "value": 0.10305,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYGBP/",
+          "source_name": "CNYGBP"
+        },
+        {
+          "pair": "CNY/INR",
+          "value": 12.1934,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYINR/",
+          "source_name": "CNYINR"
+        },
+        {
+          "pair": "CNY/BRL",
+          "value": 0.75086,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYBRL/",
+          "source_name": "CNYBRL"
+        },
+        {
+          "pair": "CNY/USD",
+          "value": 0.1392,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYUSD/",
+          "source_name": "CNYUSD"
+        },
+        {
+          "pair": "CNY/EUR",
+          "value": 0.11918,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYEUR/",
+          "source_name": "CNYEUR"
+        },
+        {
+          "pair": "CNY/JPY",
+          "value": 20.552,
+          "as_of": "2025-08-12T21:20:45Z",
+          "source_url": "https://www.tradingview.com/symbols/CNYJPY/",
+          "source_name": "CNYJPY"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 1.728,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-CN10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 1.728,
+        "unit": "PERCENT",
+        "status": "EXCELLENT"
+      }
+    },
+    "DE": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 3.65,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-DEINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 3.65,
+        "unit": "RATE_PCT",
+        "status": "MODERATE"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 2,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-DEIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 2,
+        "unit": "PERCENT",
+        "status": "EXCELLENT"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 6.3,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-DEUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 6.3,
+        "unit": "PERCENT",
+        "status": "WARNING"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 88.6,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-DEBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 88.6,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 24024.79,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/TVC-DEU40/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 24024.79,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "EUR/JPY",
+          "value": 172.566,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURJPY/",
+          "source_name": "EURJPY"
+        },
+        {
+          "pair": "EUR/GBP",
+          "value": 0.86466,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURGBP/",
+          "source_name": "EURGBP"
+        },
+        {
+          "pair": "EUR/CNY",
+          "value": 8.3866,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURCNY/",
+          "source_name": "EURCNY"
+        },
+        {
+          "pair": "EUR/INR",
+          "value": 102.2763,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURINR/",
+          "source_name": "EURINR"
+        },
+        {
+          "pair": "EUR/BRL",
+          "value": 6.2986,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURBRL/",
+          "source_name": "EURBRL"
+        },
+        {
+          "pair": "EUR/USD",
+          "value": 1.1673,
+          "as_of": "2025-08-12T21:21:20Z",
+          "source_url": "https://www.tradingview.com/symbols/EURUSD/",
+          "source_name": "EURUSD"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 2.74,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-DE10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 2.74,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      }
+    },
+    "FR": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 3.65,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-FRINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 3.65,
+        "unit": "RATE_PCT",
+        "status": "MODERATE"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 1,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-FRIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 1,
+        "unit": "PERCENT",
+        "status": "EXCELLENT"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 7.5,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-FRUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 7.5,
+        "unit": "PERCENT",
+        "status": "MODERATE"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 96.5,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-FRBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 96.5,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 7753.43,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/TVC-CAC40/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 7753.43,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "EUR/INR",
+          "value": 102.2763,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURINR/",
+          "source_name": "EURINR"
+        },
+        {
+          "pair": "EUR/BRL",
+          "value": 6.2986,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURBRL/",
+          "source_name": "EURBRL"
+        },
+        {
+          "pair": "EUR/USD",
+          "value": 1.1673,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURUSD/",
+          "source_name": "EURUSD"
+        },
+        {
+          "pair": "EUR/GBP",
+          "value": 0.86467,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURGBP/",
+          "source_name": "EURGBP"
+        },
+        {
+          "pair": "EUR/JPY",
+          "value": 172.564,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURJPY/",
+          "source_name": "EURJPY"
+        },
+        {
+          "pair": "EUR/CNY",
+          "value": 8.3866,
+          "as_of": "2025-08-12T21:23:02Z",
+          "source_url": "https://www.tradingview.com/symbols/EURCNY/",
+          "source_name": "EURCNY"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 3.403,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-FR10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 3.403,
+        "unit": "PERCENT",
+        "status": "MODERATE"
+      }
+    },
+    "GB": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 4,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-GBINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 4,
+        "unit": "RATE_PCT",
+        "status": "WARNING"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 3.6,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-GBIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 3.6,
+        "unit": "PERCENT",
+        "status": "MODERATE"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 4.7,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-GBUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 4.7,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 27,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-GBBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 27,
+        "unit": "INDEX",
+        "status": "CRITICAL"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 9147.82,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/TVC-UKX/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 9147.82,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "GBP/USD",
+          "value": 1.34959,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPUSD/",
+          "source_name": "GBPUSD"
+        },
+        {
+          "pair": "GBP/EUR",
+          "value": 1.156,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPEUR/",
+          "source_name": "GBPEUR"
+        },
+        {
+          "pair": "GBP/JPY",
+          "value": 199.562,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPJPY/",
+          "source_name": "GBPJPY"
+        },
+        {
+          "pair": "GBP/CNY",
+          "value": 9.699,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPCNY/",
+          "source_name": "GBPCNY"
+        },
+        {
+          "pair": "GBP/INR",
+          "value": 118.2399,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPINR/",
+          "source_name": "GBPINR"
+        },
+        {
+          "pair": "GBP/BRL",
+          "value": 7.2843,
+          "as_of": "2025-08-12T21:22:28Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPBRL/",
+          "source_name": "GBPBRL"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 4.618,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-GB10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 4.618,
+        "unit": "PERCENT",
+        "status": "WARNING"
+      }
+    },
+    "IN": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 5.5,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-ININTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 5.5,
+        "unit": "RATE_PCT",
+        "status": "GOOD"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 1.55,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-INIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 1.55,
+        "unit": "PERCENT",
+        "status": "WARNING"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 5.6,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-INUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 5.6,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 126.2,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-INBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 126.2,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 24487.4,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/NSE-NIFTY/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 24487.4,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "INR/USD",
+          "value": 0.01141,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INRUSD/",
+          "source_name": "INRUSD"
+        },
+        {
+          "pair": "INR/EUR",
+          "value": 0.009773,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INREUR/",
+          "source_name": "INREUR"
+        },
+        {
+          "pair": "INR/JPY",
+          "value": 1.6851,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INRJPY/",
+          "source_name": "INRJPY"
+        },
+        {
+          "pair": "INR/GBP",
+          "value": 0.008451,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INRGBP/",
+          "source_name": "INRGBP"
+        },
+        {
+          "pair": "INR/CNY",
+          "value": 0.0816,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INRCNY/",
+          "source_name": "INRCNY"
+        },
+        {
+          "pair": "INR/BRL",
+          "value": 0.061573,
+          "as_of": "2025-08-12T21:23:34Z",
+          "source_url": "https://www.tradingview.com/symbols/INRBRL/",
+          "source_name": "INRBRL"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 6.483,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-IN10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 6.483,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      }
+    },
+    "JP": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 0.5,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-JPINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 0.5,
+        "unit": "RATE_PCT",
+        "status": "GOOD"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 3.3,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-JPIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 3.3,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 2.5,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-JPUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 2.5,
+        "unit": "PERCENT",
+        "status": "EXCELLENT"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 13,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-JPBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 13,
+        "unit": "INDEX",
+        "status": "CRITICAL"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 42718.12,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 42718.12,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "JPY/CNY",
+          "value": 0.04857,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYCNY/",
+          "source_name": "JPYCNY"
+        },
+        {
+          "pair": "JPY/INR",
+          "value": 0.59254,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYINR/",
+          "source_name": "JPYINR"
+        },
+        {
+          "pair": "JPY/BRL",
+          "value": 0.03641,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYBRL/",
+          "source_name": "JPYBRL"
+        },
+        {
+          "pair": "JPY/USD",
+          "value": 0.006763,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYUSD/",
+          "source_name": "JPYUSD"
+        },
+        {
+          "pair": "JPY/EUR",
+          "value": 0.0057951,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYEUR/",
+          "source_name": "JPYEUR"
+        },
+        {
+          "pair": "JPY/GBP",
+          "value": 0.005007,
+          "as_of": "2025-08-12T21:21:54Z",
+          "source_url": "https://www.tradingview.com/symbols/JPYGBP/",
+          "source_name": "JPYGBP"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 1.506,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-JP10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 1.506,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      }
+    },
+    "US": {
+      "policy_rate": {
+        "sources": [
+          {
+            "value": 4.5,
+            "date": "2025-08-12",
+            "unit": "RATE_PCT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-USINTR/",
+            "source_name": "Policy rate"
+          }
+        ],
+        "average": 4.5,
+        "unit": "RATE_PCT",
+        "status": "MODERATE"
+      },
+      "inflation": {
+        "sources": [
+          {
+            "value": 2.7,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-USIRYY/",
+            "source_name": "CPI YoY"
+          }
+        ],
+        "average": 2.7,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "unemployment": {
+        "sources": [
+          {
+            "value": 4.2,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-USUR/",
+            "source_name": "Unemployment"
+          }
+        ],
+        "average": 4.2,
+        "unit": "PERCENT",
+        "status": "GOOD"
+      },
+      "pmi": {
+        "sources": [
+          {
+            "value": 48,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/ECONOMICS-USBCOI/",
+            "source_name": "PMI / Business confidence"
+          }
+        ],
+        "average": 48,
+        "unit": "INDEX",
+        "status": "WARNING"
+      },
+      "equity_index": {
+        "sources": [
+          {
+            "value": 6445.75,
+            "date": "2025-08-12",
+            "unit": "INDEX",
+            "source_url": "https://www.tradingview.com/symbols/SPX/",
+            "source_name": "Equity index"
+          }
+        ],
+        "average": 6445.75,
+        "unit": "INDEX",
+        "status": "EXCELLENT"
+      },
+      "fx_rates": [
+        {
+          "pair": "USD/EUR",
+          "value": 1.16727,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/EURUSD/",
+          "source_name": "EURUSD"
+        },
+        {
+          "pair": "USD/JPY",
+          "value": 147.771,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/USDJPY/",
+          "source_name": "USDJPY"
+        },
+        {
+          "pair": "USD/GBP",
+          "value": 1.34955,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/GBPUSD/",
+          "source_name": "GBPUSD"
+        },
+        {
+          "pair": "USD/CNY",
+          "value": 7.178,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/USDCNY/",
+          "source_name": "USDCNY"
+        },
+        {
+          "pair": "USD/INR",
+          "value": 87.566,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/USDINR/",
+          "source_name": "USDINR"
+        },
+        {
+          "pair": "USD/BRL",
+          "value": 5.395,
+          "as_of": "2025-08-12T21:20:10Z",
+          "source_url": "https://www.tradingview.com/symbols/USDBRL/",
+          "source_name": "USDBRL"
+        }
+      ],
+      "currency_index": {
+        "sources": null,
+        "unit": "INDEX",
+        "status": "UNKNOWN"
+      },
+      "bond_yield_10y": {
+        "sources": [
+          {
+            "value": 4.289,
+            "date": "2025-08-12",
+            "unit": "PERCENT",
+            "source_url": "https://www.tradingview.com/symbols/TVC-US10Y/",
+            "source_name": "10Y Gov Yield"
+          }
+        ],
+        "average": 4.289,
+        "unit": "PERCENT",
+        "status": "MODERATE"
+      }
+    }
+  },
+  "summary": {
+    "summary": "The global economy shows varied economic performance, with Germany and France experiencing low inflation and unemployment but PMI indices suggesting weak growth. Japan and the UK face moderate inflation with concerningly low PMI readings pointing to contraction, while India shows robust PMI indicating growth despite moderate unemployment. The US and Brazil present moderate inflation rates and low PMI, signaling economic slowdown; China has zero inflation but low PMI, reflecting economic stagnation. Bond yields vary widely with Brazil displaying significantly high yields.",
+    "tip": "Consider diversifying investments geographically to hedge against varying economic conditions and potential regional downturns."
+  }
+}
