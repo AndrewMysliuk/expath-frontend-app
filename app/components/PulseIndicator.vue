@@ -4,12 +4,12 @@
     <div class="flex items-center justify-between gap-3 mb-3">
       <div class="flex items-center gap-2">
         <span class="inline-flex h-2.5 w-2.5 rounded-full animate-pulse" :style="{ backgroundColor: stroke }" aria-hidden="true" />
-        <span class="text-sm sm:text-base font-medium text-gray-900"> Economic Pulse </span>
+        <span class="text-sm sm:text-base font-medium text-gray-900">Economic Pulse</span>
       </div>
 
       <!-- Status badge -->
       <span
-        class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium"
+        class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium border"
         :style="{
           color: stroke,
           backgroundColor: stroke + '15',
@@ -21,34 +21,42 @@
       </span>
     </div>
 
-    <!-- KPI strip -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-3">
-      <div class="rounded-lg border px-3 py-2" :style="{ borderColor: stroke + '33', backgroundColor: '#fff' }">
-        <div class="text-[11px] uppercase tracking-wide text-gray-500">BPM</div>
-        <div class="text-lg font-semibold text-gray-900">
-          {{ bpm }}
-          <span class="text-xs text-gray-500 ml-1">beats/min</span>
+    <!-- Canvas -->
+    <canvas ref="canvasEl" class="block w-full rounded-xl border" :style="{ height: '220px', borderColor: stroke + '26' }" />
+
+    <div class="mt-4">
+      <!-- Summary -->
+      <div
+        class="rounded-lg border px-3 py-3 mb-2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]"
+        :style="{
+          borderColor: '#e5e7eb',
+          backgroundColor: '#fff',
+          boxShadow: `0 1px 0 0 ${stroke}10 inset`,
+          borderLeft: `3px solid ${stroke}`,
+        }"
+      >
+        <div class="text-[11px] uppercase tracking-wide text-gray-500 mb-1">Summary</div>
+        <div class="text-sm text-gray-900 leading-relaxed">
+          {{ getDailyData?.summary.summary }}
         </div>
       </div>
 
-      <div class="rounded-lg border px-3 py-2" :style="{ borderColor: stroke + '33', backgroundColor: '#fff' }">
-        <div class="text-[11px] uppercase tracking-wide text-gray-500">Variability</div>
-        <div class="text-lg font-semibold text-gray-900">
-          {{ hrvPctDisplay }}
-          <span class="text-xs text-gray-500 ml-1">HRV</span>
-        </div>
-      </div>
-
-      <div class="rounded-lg border px-3 py-2 col-span-2 sm:col-span-1" :style="{ borderColor: stroke + '33', backgroundColor: '#fff' }">
-        <div class="text-[11px] uppercase tracking-wide text-gray-500">Noise</div>
-        <div class="text-lg font-semibold text-gray-900">
-          {{ noiseAmpDisplay }}
+      <!-- Tip -->
+      <div
+        class="rounded-lg border px-3 py-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]"
+        :style="{
+          borderColor: '#e5e7eb',
+          backgroundColor: '#fff',
+          boxShadow: `0 1px 0 0 ${stroke}10 inset`,
+          borderLeft: `3px solid ${stroke}`,
+        }"
+      >
+        <div class="text-[11px] uppercase tracking-wide text-gray-500 mb-1">Tip</div>
+        <div class="text-sm text-gray-900 leading-relaxed">
+          {{ getDailyData?.summary.tip }}
         </div>
       </div>
     </div>
-
-    <!-- Canvas -->
-    <canvas ref="canvasEl" class="block w-full rounded-xl border" :style="{ height: '220px', borderColor: stroke + '26' }" />
   </div>
 </template>
 
@@ -64,6 +72,7 @@ export default defineComponent({
 
     const getGlobalStatus = computed(() => incomingDataStore.getGlobalStatus)
     const getWaveParams = computed(() => incomingDataStore.getWaveParams)
+    const getDailyData = computed(() => incomingDataStore.getDailyData)
 
     const { canvasEl } = usePulseRenderer(getWaveParams, getGlobalStatus)
 
@@ -87,24 +96,12 @@ export default defineComponent({
     })
 
     const stroke = computed(() => getWaveParams.value?.STROKE ?? "#9ca3af")
-    const bpm = computed(() => Math.round(getWaveParams.value?.BPM ?? 0))
-    const hrvPctDisplay = computed(() => {
-      const v = getWaveParams.value?.HRV_PCT ?? 0
-      return `${Math.round(v * 100)}%`
-    })
-    const noiseAmpDisplay = computed(() => {
-      const v = getWaveParams.value?.NOISE_AMP ?? 0
-
-      return `${Math.round(v * 100)}%`
-    })
 
     return {
       canvasEl,
       statusLabel,
       stroke,
-      bpm,
-      hrvPctDisplay,
-      noiseAmpDisplay,
+      getDailyData,
       getGlobalStatus,
     }
   },
