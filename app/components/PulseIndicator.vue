@@ -1,29 +1,26 @@
 <template>
-  <div class="w-full rounded-2xl border bg-white p-3 sm:p-4 shadow-sm" :style="{ borderColor: stroke, boxShadow: `0 0 0 1px ${stroke}10` }">
-    <!-- Header -->
-    <div class="flex items-center justify-between gap-3 mb-3">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex h-2.5 w-2.5 rounded-full animate-pulse" :style="{ backgroundColor: stroke }" aria-hidden="true" />
-        <span class="text-sm sm:text-base font-medium text-gray-900">Economic Pulse</span>
+  <section class="px-6 py-16">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+        <div
+          class="bg-white border-2 rounded-xl p-8 max-w-2xl mx-auto shadow-sm"
+          :style="{ borderColor: stroke, boxShadow: `0 0 0 1px ${stroke}10` }"
+        >
+          <div class="mb-6">
+            <div class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Current Global Status</div>
+
+            <div class="flex items-center justify-center gap-3">
+              <span class="text-2xl font-semibold text-gray-700">{{ statusLabel }}</span>
+            </div>
+          </div>
+
+          <div class="w-full rounded-xl border overflow-hidden" :style="{ borderColor: stroke + '26' }">
+            <canvas ref="canvasEl" class="block w-full" :style="{ height: '220px' }" />
+          </div>
+        </div>
       </div>
-
-      <!-- Status badge -->
-      <span
-        class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium border"
-        :style="{
-          color: stroke,
-          backgroundColor: stroke + '15',
-          borderColor: stroke + '33',
-        }"
-      >
-        <span class="h-1.5 w-1.5 rounded-full" :style="{ backgroundColor: stroke }" />
-        {{ statusLabel }}
-      </span>
     </div>
-
-    <!-- Canvas -->
-    <canvas ref="canvasEl" class="block w-full rounded-xl border" :style="{ height: '220px', borderColor: stroke + '26' }" />
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
