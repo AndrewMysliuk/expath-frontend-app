@@ -180,6 +180,93 @@ export class PulseRenderer {
     this.setTempoForNewCycle()
   }
 
+  private computeNextY(
+    currentPhase: Phase,
+    currentPhasePx: number,
+    stepPx: number,
+    baseY: number
+  ): { y: number; nextPhase: Phase; nextPhasePx: number } {
+    let y = baseY
+    let nextPhase = currentPhase
+    let nextPx = currentPhasePx + stepPx
+
+    const smallTopY = baseY - this.height * this.smallAmp
+    const bigTopY = baseY - this.height * this.bigAmp
+    const dipY = baseY + this.height * this.TINY_DIP_AMP
+
+    const advance = (threshold: number, calc: (p: number) => number, toPhase: Phase) => {
+      const p = Math.min(1, currentPhasePx / threshold)
+      if (nextPx >= threshold) {
+        nextPx = 0
+        nextPhase = toPhase
+      }
+      return calc(p)
+    }
+
+    switch (currentPhase) {
+      case "baseline1":
+        y = baseY
+        if (nextPx >= this.BASELINE1_LEN) {
+          nextPx = 0
+          nextPhase = "small_rise"
+        }
+        break
+
+      case "small_rise":
+        y = advance(this.SMALL_RISE, (p) => baseY + (smallTopY - baseY) * p, "small_fall")
+        break
+
+      case "small_fall":
+        y = advance(this.SMALL_FALL, (p) => smallTopY + (baseY - smallTopY) * p, "baseline_after_small")
+        break
+
+      case "baseline_after_small":
+        y = baseY
+        if (nextPx >= this.BASELINE_AFTER_SMALL) {
+          nextPx = 0
+          nextPhase = "tiny_dip"
+        }
+        break
+
+      case "tiny_dip":
+        y = advance(this.TINY_DIP_LEN, (p) => baseY + (dipY - baseY) * p, "big_rise")
+        break
+
+      case "big_rise":
+        y = advance(this.BIG_RISE, (p) => baseY + (bigTopY - baseY) * p, "big_fall")
+        break
+
+      case "big_fall":
+        y = advance(this.BIG_FALL, (p) => bigTopY + (baseY - bigTopY) * p, "noise")
+        break
+
+      case "noise": {
+        const p = Math.min(1, currentPhasePx / this.NOISE_LEN)
+        const env = Math.sin(Math.PI * p)
+        const amp = this.height * this.noiseAmp * env
+        const core = Math.sin(2 * Math.PI * this.NOISE_WAVES * p)
+        y = baseY + amp * core
+
+        if (this.noiseJitterPx > 0) {
+          y += (Math.random() * 2 - 1) * this.noiseJitterPx
+        }
+
+        if (this.glitchActive && currentPhasePx <= this.glitchUntilPx && this.glitchAmp > 0) {
+          y += (Math.random() < 0.5 ? -1 : 1) * this.height * this.glitchAmp
+        }
+
+        if (nextPx >= this.NOISE_LEN) {
+          nextPx = 0
+          nextPhase = "baseline1"
+        }
+
+        break
+      }
+    }
+
+    return { y, nextPhase, nextPhasePx: nextPx }
+  }
+
   private resize() {
     if (!this.canvas || !this.ctx) return
     this.dpr = window.devicePixelRatio || 1
@@ -208,9 +295,6 @@ export class PulseRenderer {
     let localPhasePx = 0
 
     const baseY = this.height / 2
-    const smallTopY = baseY - this.height * this.smallAmp
-    const bigTopY = baseY - this.height * this.bigAmp
-    const dipY = baseY + this.height * this.TINY_DIP_AMP
 
     ctx.beginPath()
     ctx.lineWidth = this.lineWidth
@@ -220,94 +304,10 @@ export class PulseRenderer {
     ctx.moveTo(px, py)
 
     while (px < this.width) {
-      switch (localPhase) {
-        case "baseline1":
-          py = baseY
-          localPhasePx += 1
-          if (localPhasePx >= this.BASELINE1_LEN) {
-            localPhase = "small_rise"
-            localPhasePx = 0
-          }
-          break
-
-        case "small_rise": {
-          const p = Math.min(1, localPhasePx / this.SMALL_RISE)
-          py = baseY + (smallTopY - baseY) * p
-          localPhasePx += 1
-          if (localPhasePx >= this.SMALL_RISE) {
-            localPhase = "small_fall"
-            localPhasePx = 0
-          }
-          break
-        }
-
-        case "small_fall": {
-          const p = Math.min(1, localPhasePx / this.SMALL_FALL)
-          py = smallTopY + (baseY - smallTopY) * p
-          localPhasePx += 1
-          if (localPhasePx >= this.SMALL_FALL) {
-            localPhase = "baseline_after_small"
-            localPhasePx = 0
-          }
-          break
-        }
-
-        case "baseline_after_small":
-          py = baseY
-          localPhasePx += 1
-          if (localPhasePx >= this.BASELINE_AFTER_SMALL) {
-            localPhase = "tiny_dip"
-            localPhasePx = 0
-          }
-          break
-
-        case "tiny_dip": {
-          const p = Math.min(1, localPhasePx / this.TINY_DIP_LEN)
-          py = baseY + (dipY - baseY) * p
-          localPhasePx += 1
-          if (localPhasePx >= this.TINY_DIP_LEN) {
-            localPhase = "big_rise"
-            localPhasePx = 0
-          }
-          break
-        }
-
-        case "big_rise": {
-          const p = Math.min(1, localPhasePx / this.BIG_RISE)
-          py = baseY + (bigTopY - baseY) * p
-          localPhasePx += 1
-          if (localPhasePx >= this.BIG_RISE) {
-            localPhase = "big_fall"
-            localPhasePx = 0
-          }
-          break
-        }
-
-        case "big_fall": {
-          const p = Math.min(1, localPhasePx / this.BIG_FALL)
-          py = bigTopY + (baseY - bigTopY) * p
-          localPhasePx += 1
-          if (localPhasePx >= this.BIG_FALL) {
-            localPhase = "noise"
-            localPhasePx = 0
-          }
-          break
-        }
-
-        case "noise": {
-          const p = Math.min(1, localPhasePx / this.NOISE_LEN)
-          const env = Math.sin(Math.PI * p)
-          const amp = this.height * this.noiseAmp * env
-          const core = Math.sin(2 * Math.PI * this.NOISE_WAVES * p)
-          py = baseY + amp * core
-          localPhasePx += 1
-          if (localPhasePx >= this.NOISE_LEN) {
-            localPhase = "baseline1"
-            localPhasePx = 0
-          }
-          break
-        }
-      }
+      const res = this.computeNextY(localPhase, localPhasePx, 1, baseY)
+      py = res.y
+      localPhase = res.nextPhase
+      localPhasePx = res.nextPhasePx
 
       px += 1
       ctx.lineTo(px, py)
@@ -354,6 +354,7 @@ export class PulseRenderer {
       const ex = (this.x + i) % this.width
       ctx.clearRect(ex, 0, 1, this.height)
     }
+
     if (this.fadeOut > this.whiteOut) {
       ctx.save()
       ctx.globalAlpha = this.fadeOpacity
@@ -380,113 +381,14 @@ export class PulseRenderer {
         : 0
     const baseY = baseY0 + wander
 
-    const smallTopY = baseY - this.height * this.smallAmp
-    const bigTopY = baseY - this.height * this.bigAmp
-    const dipY = baseY + this.height * this.TINY_DIP_AMP
-
     ctx.beginPath()
     ctx.moveTo(this.x, this.y)
 
     for (let i = 0; i < steps; i++) {
-      switch (this.phase) {
-        case "baseline1":
-          this.y = baseY
-          this.phasePx += stepPx
-          if (this.phasePx >= this.BASELINE1_LEN) {
-            this.phase = "small_rise"
-            this.phasePx = 0
-          }
-          break
-
-        case "small_rise": {
-          const p = Math.min(1, this.phasePx / this.SMALL_RISE)
-          this.y = baseY + (smallTopY - baseY) * p
-          this.phasePx += stepPx
-          if (this.phasePx >= this.SMALL_RISE) {
-            this.phase = "small_fall"
-            this.phasePx = 0
-          }
-          break
-        }
-
-        case "small_fall": {
-          const p = Math.min(1, this.phasePx / this.SMALL_FALL)
-          this.y = smallTopY + (baseY - smallTopY) * p
-          this.phasePx += stepPx
-          if (this.phasePx >= this.SMALL_FALL) {
-            this.phase = "baseline_after_small"
-            this.phasePx = 0
-          }
-          break
-        }
-
-        case "baseline_after_small":
-          this.y = baseY
-          this.phasePx += stepPx
-          if (this.phasePx >= this.BASELINE_AFTER_SMALL) {
-            this.phase = "tiny_dip"
-            this.phasePx = 0
-          }
-          break
-
-        case "tiny_dip": {
-          const p = Math.min(1, this.phasePx / this.TINY_DIP_LEN)
-          this.y = baseY + (dipY - baseY) * p
-          this.phasePx += stepPx
-          if (this.phasePx >= this.TINY_DIP_LEN) {
-            this.phase = "big_rise"
-            this.phasePx = 0
-          }
-          break
-        }
-
-        case "big_rise": {
-          const p = Math.min(1, this.phasePx / this.BIG_RISE)
-          this.y = baseY + (bigTopY - baseY) * p
-          this.phasePx += stepPx
-          if (this.phasePx >= this.BIG_RISE) {
-            this.phase = "big_fall"
-            this.phasePx = 0
-          }
-          break
-        }
-
-        case "big_fall": {
-          const p = Math.min(1, this.phasePx / this.BIG_FALL)
-          this.y = bigTopY + (baseY - bigTopY) * p
-          this.phasePx += stepPx
-          if (this.phasePx >= this.BIG_FALL) {
-            this.phase = "noise"
-            this.phasePx = 0
-          }
-          break
-        }
-
-        case "noise": {
-          const p = Math.min(1, this.phasePx / this.NOISE_LEN)
-          const env = Math.sin(Math.PI * p)
-          const amp = this.height * this.noiseAmp * env
-          const core = Math.sin(2 * Math.PI * this.NOISE_WAVES * p)
-
-          let y = baseY + amp * core
-
-          if (this.noiseJitterPx > 0) {
-            y += (Math.random() * 2 - 1) * this.noiseJitterPx
-          }
-
-          if (this.glitchActive && this.phasePx <= this.glitchUntilPx && this.glitchAmp > 0) {
-            y += (Math.random() < 0.5 ? -1 : 1) * this.height * this.glitchAmp
-          }
-
-          this.y = y
-          this.phasePx += stepPx
-          if (this.phasePx >= this.NOISE_LEN) {
-            this.resetCycle()
-            this.y = baseY
-          }
-          break
-        }
-      }
+      const res = this.computeNextY(this.phase, this.phasePx, stepPx, baseY)
+      this.y = res.y
+      this.phase = res.nextPhase
+      this.phasePx = res.nextPhasePx
 
       const nextX = this.x + stepPx
       if (nextX >= this.width) {

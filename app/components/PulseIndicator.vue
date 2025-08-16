@@ -23,40 +23,6 @@
 
     <!-- Canvas -->
     <canvas ref="canvasEl" class="block w-full rounded-xl border" :style="{ height: '220px', borderColor: stroke + '26' }" />
-
-    <div class="mt-4">
-      <!-- Summary -->
-      <div
-        class="rounded-lg border px-3 py-3 mb-2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]"
-        :style="{
-          borderColor: '#e5e7eb',
-          backgroundColor: '#fff',
-          boxShadow: `0 1px 0 0 ${stroke}10 inset`,
-          borderLeft: `3px solid ${stroke}`,
-        }"
-      >
-        <div class="text-[11px] uppercase tracking-wide text-gray-500 mb-1">Summary</div>
-        <div class="text-sm text-gray-900 leading-relaxed">
-          {{ getDailyData?.summary.summary }}
-        </div>
-      </div>
-
-      <!-- Tip -->
-      <div
-        class="rounded-lg border px-3 py-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]"
-        :style="{
-          borderColor: '#e5e7eb',
-          backgroundColor: '#fff',
-          boxShadow: `0 1px 0 0 ${stroke}10 inset`,
-          borderLeft: `3px solid ${stroke}`,
-        }"
-      >
-        <div class="text-[11px] uppercase tracking-wide text-gray-500 mb-1">Tip</div>
-        <div class="text-sm text-gray-900 leading-relaxed">
-          {{ getDailyData?.summary.tip }}
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -72,7 +38,6 @@ export default defineComponent({
 
     const getGlobalStatus = computed(() => incomingDataStore.getGlobalStatus)
     const getWaveParams = computed(() => incomingDataStore.getWaveParams)
-    const getDailyData = computed(() => incomingDataStore.getDailyData)
 
     const { canvasEl } = usePulseRenderer(getWaveParams, getGlobalStatus)
 
@@ -101,7 +66,6 @@ export default defineComponent({
       canvasEl,
       statusLabel,
       stroke,
-      getDailyData,
       getGlobalStatus,
     }
   },
