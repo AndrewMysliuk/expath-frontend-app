@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-white">
     <header class="px-6 py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white text-center">
-      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Economic Pulse</h1>
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Global Economic Overview – Key Indicators by Country</h1>
       <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
         Live snapshot of macroeconomic indicators across countries
       </p>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <CountryCard v-for="country in filteredCountries" :key="country.code" :country="country" />
+        <CountryCard v-for="country in filteredCountries" :key="country.slug" :country="country" />
       </div>
     </section>
 
@@ -58,6 +58,7 @@ export default defineComponent({
     const countries = [
       {
         code: "us",
+        slug: "united-states",
         name: "United States",
         region: "North America",
         flag: "🇺🇸",
@@ -67,6 +68,7 @@ export default defineComponent({
       },
       {
         code: "de",
+        slug: "germany",
         name: "Germany",
         region: "Europe",
         flag: "🇩🇪",
@@ -76,6 +78,7 @@ export default defineComponent({
       },
       {
         code: "jp",
+        slug: "japan",
         name: "Japan",
         region: "Asia",
         flag: "🇯🇵",
@@ -85,6 +88,7 @@ export default defineComponent({
       },
       {
         code: "br",
+        slug: "brazil",
         name: "Brazil",
         region: "South America",
         flag: "🇧🇷",
@@ -94,6 +98,7 @@ export default defineComponent({
       },
       {
         code: "cn",
+        slug: "china",
         name: "China",
         region: "Asia",
         flag: "🇨🇳",
@@ -103,6 +108,7 @@ export default defineComponent({
       },
       {
         code: "gb",
+        slug: "united-kingdom",
         name: "United Kingdom",
         region: "Europe",
         flag: "🇬🇧",
@@ -112,6 +118,7 @@ export default defineComponent({
       },
       {
         code: "fr",
+        slug: "france",
         name: "France",
         region: "Europe",
         flag: "🇫🇷",
@@ -121,6 +128,7 @@ export default defineComponent({
       },
       {
         code: "in",
+        slug: "india",
         name: "India",
         region: "Asia",
         trend: "up",

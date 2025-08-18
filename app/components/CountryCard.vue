@@ -1,7 +1,7 @@
 <template>
   <div
     class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-orange-200 transition-all duration-200 cursor-pointer"
-    @click="$router.push(`/country/${country.code}`)"
+    @click="$router.push(`/country/${country.slug}`)"
   >
     <div class="flex items-center justify-between mb-4">
       <div>

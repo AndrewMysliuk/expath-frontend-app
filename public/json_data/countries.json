@@ -1,6 +1,7 @@
 [
   {
     "country": "United States of America",
+    "slug": "united-states",
     "country_iso": "us",
     "mask_repeat": "no-repeat",
     "mask_size": "100% 100%",
@@ -14,6 +15,7 @@
   },
   {
     "country": "China",
+    "slug": "china",
     "country_iso": "cn",
     "mask_repeat": "no-repeat",
     "mask_size": "contain",
@@ -27,6 +29,7 @@
   },
   {
     "country": "Germany",
+    "slug": "germany",
     "country_iso": "de",
     "mask_repeat": "no-repeat",
     "mask_size": "contain",
@@ -40,6 +43,7 @@
   },
   {
     "country": "Japan",
+    "slug": "japan",
     "country_iso": "jp",
     "mask_repeat": "no-repeat",
     "mask_size": "contain",
@@ -53,6 +57,7 @@
   },
   {
     "country": "United Kingdom",
+    "slug": "united-kingdom",
     "country_iso": "gb",
     "mask_repeat": "no-repeat",
     "mask_size": "100% 100%",
@@ -66,6 +71,7 @@
   },
   {
     "country": "France",
+    "slug": "france",
     "country_iso": "fr",
     "mask_repeat": "no-repeat",
     "mask_size": "100% 100%",
@@ -74,11 +80,12 @@
     "webkit_mask_size": "100% 100%",
     "webkit_mask_position": "center",
     "background_size": "cover",
-    "background_position": "100% 100%",
+    "background_position": "center",
     "background_repeat": "no-repeat"
   },
   {
     "country": "India",
+    "slug": "india",
     "country_iso": "in",
     "mask_repeat": "no-repeat",
     "mask_size": "100% 100%",
@@ -92,6 +99,7 @@
   },
   {
     "country": "Brazil",
+    "slug": "brazil",
     "country_iso": "br",
     "mask_repeat": "no-repeat",
     "mask_size": "100% 100%",

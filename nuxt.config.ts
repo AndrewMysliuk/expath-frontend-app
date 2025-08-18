@@ -1,3 +1,5 @@
+const countries = ["united-states", "germany", "japan", "brazil", "china", "united-kingdom", "france", "india"]
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -5,6 +7,9 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     preset: "static",
+    prerender: {
+      routes: countries.map((slug) => `/country/${slug}`),
+    },
   },
 
   css: ["~/assets/scss/main.scss"],

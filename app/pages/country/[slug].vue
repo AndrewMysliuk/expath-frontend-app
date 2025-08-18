@@ -458,9 +458,9 @@ export default defineComponent({
   setup() {
     const incomingDataStore = useIncomingDataStore()
     const route = useRoute()
-    const iso = route.params.iso
+    const slug = route.params.slug
 
-    const getCountriesData = computed(() => incomingDataStore.getCountriesData?.find((item) => item.country_iso === iso))
+    const getCountriesData = computed(() => incomingDataStore.getCountriesData?.find((item) => item.slug === slug))
     const formattedDate = computed(() => {
       return new Date().toLocaleDateString("en-US", {
         year: "numeric",

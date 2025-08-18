@@ -1,5 +1,6 @@
 export interface ICountry {
   country: string
+  slug: string
   country_iso: string
   mask_repeat: string
   mask_size: string
