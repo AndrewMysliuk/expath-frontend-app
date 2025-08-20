@@ -8,7 +8,7 @@
             <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contact</router-link>
           </li>
           <li>
-            <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Methodology</router-link>
+            <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Glossary</router-link>
           </li>
           <li>
             <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Data Sources</router-link>

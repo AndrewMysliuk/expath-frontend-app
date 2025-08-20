@@ -1,5 +1,5 @@
 <template>
-  <section class="px-6 py-16">
+  <section class="px-6 pb-16">
     <div class="max-w-6xl mx-auto">
       <div class="text-center">
         <div

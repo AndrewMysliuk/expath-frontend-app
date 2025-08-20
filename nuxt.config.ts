@@ -41,6 +41,12 @@ export default defineNuxtConfig({
         { property: "og:image", content: "/cover.png" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      script: [
+        {
+          src: "https://kit.fontawesome.com/3e574103a5.js",
+          crossorigin: "anonymous",
+        },
+      ],
     },
   },
 })

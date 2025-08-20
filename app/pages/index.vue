@@ -1,22 +1,24 @@
 <template>
   <div class="min-h-screen bg-white">
     <header class="px-6 py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white text-center">
-      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Global Economic Overview – Key Indicators by Country</h1>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-        Live snapshot of macroeconomic indicators across countries
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">Global Economic Overview</h1>
+      <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        A live snapshot of key economic indicators across countries
       </p>
-      <router-link to="/library" class="inline-block mt-6 text-sm text-orange-600 hover:underline transition">
-        View economic terms glossary
-      </router-link>
-      <div class="mt-8 text-sm text-gray-500">Data as of {{ formattedDate }}</div>
+
+      <div class="mt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+        <router-link to="/glossary" class="text-orange-600 hover:underline transition"> View Economic Glossary </router-link>
+        <span class="text-gray-400">|</span>
+        <div class="text-gray-500">Updated {{ formattedDate }}</div>
+      </div>
     </header>
 
-    <section class="px-6 py-12 bg-gray-50 text-center">
+    <!-- <section class="px-6 py-12 bg-gray-50 text-center">
       <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
         This site provides a quick, readable overview of key economic conditions across multiple countries, helping you understand global
         economic trends at a glance.
       </p>
-    </section>
+    </section> -->
 
     <PulseIndicator class="mx-auto" />
 
@@ -57,84 +59,14 @@ export default defineComponent({
     const search = ref<string>("")
     const countries = [
       {
-        code: "us",
-        slug: "united-states",
-        name: "United States",
-        region: "North America",
-        flag: "🇺🇸",
-        trend: "up",
-        score: 78,
-        summary: "The economy is resilient, with steady consumer demand.",
-      },
-      {
         code: "de",
         slug: "germany",
         name: "Germany",
         region: "Europe",
         flag: "🇩🇪",
-        trend: "down",
-        score: 62,
+        trend: "up",
+        score: 85,
         summary: "Inflation is stable, but business activity remains weak.",
-      },
-      {
-        code: "jp",
-        slug: "japan",
-        name: "Japan",
-        region: "Asia",
-        flag: "🇯🇵",
-        trend: "up",
-        score: 54,
-        summary: "Low inflation, but export weakness is dragging down growth.",
-      },
-      {
-        code: "br",
-        slug: "brazil",
-        name: "Brazil",
-        region: "South America",
-        flag: "🇧🇷",
-        trend: "",
-        score: 44,
-        summary: "Currency pressure and fiscal risks remain elevated.",
-      },
-      {
-        code: "cn",
-        slug: "china",
-        name: "China",
-        region: "Asia",
-        flag: "🇨🇳",
-        trend: "down",
-        score: 59,
-        summary: "Recovery remains uneven, with weakness in the real estate sector.",
-      },
-      {
-        code: "gb",
-        slug: "united-kingdom",
-        name: "United Kingdom",
-        region: "Europe",
-        flag: "🇬🇧",
-        trend: "up",
-        score: 58,
-        summary: "High inflation persists, and consumer confidence is low.",
-      },
-      {
-        code: "fr",
-        slug: "france",
-        name: "France",
-        region: "Europe",
-        flag: "🇫🇷",
-        trend: "",
-        score: 63,
-        summary: "Moderate growth, but structural issues in labor market remain.",
-      },
-      {
-        code: "in",
-        slug: "india",
-        name: "India",
-        region: "Asia",
-        trend: "up",
-        flag: "🇮🇳",
-        score: 69,
-        summary: "Strong domestic demand and services growth support the economy.",
       },
     ]
 
