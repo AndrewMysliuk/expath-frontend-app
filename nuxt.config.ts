@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "static",
     prerender: {
-      routes: countries.map((slug) => `/country/${slug}`),
+      routes: countries.map((name) => `/country/${name}`),
     },
   },
 
@@ -47,6 +47,14 @@ export default defineNuxtConfig({
           crossorigin: "anonymous",
         },
       ],
+    },
+  },
+
+  runtimeConfig: {
+    googleScriptEndpoint: "",
+
+    public: {
+      contactEndpoint: "/api/contact",
     },
   },
 })

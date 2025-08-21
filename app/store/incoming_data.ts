@@ -3,19 +3,16 @@ import { defineStore } from "pinia"
 import { MetricStatusEnum, type ICountry, type IDailyData, type IHistory } from "~/types"
 
 const DAILY_URL = "/json_data/2025-08-12.json"
-const HISTORY_URL = "/json_data/history_180.json"
 const COUNTRIES_URL = "/json_data/countries.json"
 
 export const useIncomingDataStore = defineStore("incomingDateStore", () => {
   const dailyData = ref<IDailyData | null>(null)
-  const historyData = ref<IHistory | null>(null)
   const countriesData = ref<ICountry[]>([])
   const isLoading = ref<boolean>(false)
   const errorMessage = ref<string | null>(null)
   const ac = ref<AbortController | null>(null)
 
   const getDailyData = computed(() => dailyData.value)
-  const getHistoryData = computed(() => historyData.value)
   const getCountriesData = computed(() => countriesData.value)
   const getGlobalStatus = computed(() => (dailyData.value ? computeGlobalStatus(dailyData.value).status : MetricStatusEnum.UNKNOWN))
   const getWaveParams = computed(() =>
@@ -43,22 +40,6 @@ export const useIncomingDataStore = defineStore("incomingDateStore", () => {
     }
   }
 
-  const fetchHistoryData = async (force = false) => {
-    if (historyData.value && !force) return historyData.value
-
-    try {
-      const data = await $fetch<IHistory>(HISTORY_URL, {
-        headers: { accept: "application/json" },
-      })
-      historyData.value = data
-
-      return data
-    } catch (err: any) {
-      errorMessage.value = err?.message ?? "Failed to load history"
-      throw err
-    }
-  }
-
   const fetchCountriesData = async (force = false) => {
     if (countriesData.value.length && !force) return countriesData.value
 
@@ -76,8 +57,8 @@ export const useIncomingDataStore = defineStore("incomingDateStore", () => {
   }
 
   const fetchAllData = async (force = false) => {
-    if (!force && dailyData.value && historyData.value) {
-      return { daily: dailyData.value, history: historyData.value }
+    if (!force && dailyData.value && countriesData.value) {
+      return { daily: dailyData.value, countries: countriesData.value }
     }
 
     cancel()
@@ -86,12 +67,8 @@ export const useIncomingDataStore = defineStore("incomingDateStore", () => {
     errorMessage.value = null
 
     try {
-      const [daily, history, countries] = await Promise.all([
+      const [daily, countries] = await Promise.all([
         $fetch<IDailyData>(DAILY_URL, {
-          signal: ac.value.signal,
-          headers: { accept: "application/json" },
-        }),
-        $fetch<IHistory>(HISTORY_URL, {
           signal: ac.value.signal,
           headers: { accept: "application/json" },
         }),
@@ -102,10 +79,9 @@ export const useIncomingDataStore = defineStore("incomingDateStore", () => {
       ])
 
       dailyData.value = daily
-      historyData.value = history
       countriesData.value = countries
 
-      return { daily, history, countries }
+      return { daily, countries }
     } catch (e: any) {
       errorMessage.value = e?.message ?? "Failed to load"
       throw e
@@ -117,13 +93,11 @@ export const useIncomingDataStore = defineStore("incomingDateStore", () => {
 
   return {
     getDailyData,
-    getHistoryData,
     getCountriesData,
     getGlobalStatus,
     getWaveParams,
     cancel,
     fetchDailyData,
-    fetchHistoryData,
     fetchCountriesData,
     fetchAllData,
   }

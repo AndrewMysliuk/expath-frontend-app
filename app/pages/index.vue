@@ -7,18 +7,11 @@
       </p>
 
       <div class="mt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
-        <router-link to="/glossary" class="text-orange-600 hover:underline transition"> View Economic Glossary </router-link>
+        <router-link to="/library" class="text-blue-600 hover:underline transition"> View Economic Glossary </router-link>
         <span class="text-gray-400">|</span>
         <div class="text-gray-500">Updated {{ formattedDate }}</div>
       </div>
     </header>
-
-    <!-- <section class="px-6 py-12 bg-gray-50 text-center">
-      <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-        This site provides a quick, readable overview of key economic conditions across multiple countries, helping you understand global
-        economic trends at a glance.
-      </p>
-    </section> -->
 
     <PulseIndicator class="mx-auto" />
 
@@ -63,7 +56,6 @@ export default defineComponent({
         slug: "germany",
         name: "Germany",
         region: "Europe",
-        flag: "🇩🇪",
         trend: "up",
         score: 85,
         summary: "Inflation is stable, but business activity remains weak.",

@@ -3,15 +3,13 @@
     <div class="max-w-6xl mx-auto">
       <nav aria-label="Footer">
         <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
-          <li><router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">About</router-link></li>
+          <li><router-link to="/" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Home</router-link></li>
+          <li><router-link to="/about" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">About</router-link></li>
           <li>
-            <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contact</router-link>
+            <router-link to="/contact" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contact</router-link>
           </li>
           <li>
             <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Glossary</router-link>
-          </li>
-          <li>
-            <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Data Sources</router-link>
           </li>
         </ul>
       </nav>

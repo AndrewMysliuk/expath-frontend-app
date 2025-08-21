@@ -7,16 +7,18 @@
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">Key macroeconomic terms explained in a clear and simple way.</p>
         </header>
 
-        <nav class="mb-12 text-sm text-orange-600">
-          <ul class="flex flex-wrap justify-center gap-4">
-            <li><NuxtLink to="#policy-rate" class="hover:underline">Policy Interest Rate</NuxtLink></li>
-            <li><NuxtLink to="#cpi" class="hover:underline">CPI</NuxtLink></li>
-            <li><NuxtLink to="#unemployment" class="hover:underline">Unemployment</NuxtLink></li>
-            <li><NuxtLink to="#pmi" class="hover:underline">PMI</NuxtLink></li>
-            <li><NuxtLink to="#equity-index" class="hover:underline">Equity Index</NuxtLink></li>
-            <li><NuxtLink to="#bond-yield" class="hover:underline">10Y Bond Yield</NuxtLink></li>
-            <li><NuxtLink to="#fx-rate" class="hover:underline">FX Rate</NuxtLink></li>
-          </ul>
+        <nav class="mb-12">
+          <div class="overflow-x-auto pb-2">
+            <ul class="inline-flex sm:flex-wrap gap-2 sm:gap-4 text-sm text-blue-600 whitespace-nowrap transition">
+              <li><NuxtLink to="#policy-rate" class="hover:underline">Policy Interest Rate</NuxtLink></li>
+              <li><NuxtLink to="#cpi" class="hover:underline">CPI</NuxtLink></li>
+              <li><NuxtLink to="#unemployment" class="hover:underline">Unemployment</NuxtLink></li>
+              <li><NuxtLink to="#pmi" class="hover:underline">PMI</NuxtLink></li>
+              <li><NuxtLink to="#equity-index" class="hover:underline">Equity Index</NuxtLink></li>
+              <li><NuxtLink to="#bond-yield" class="hover:underline">10Y Bond Yield</NuxtLink></li>
+              <li><NuxtLink to="#fx-rate" class="hover:underline">FX Rate</NuxtLink></li>
+            </ul>
+          </div>
         </nav>
 
         <div class="space-y-12">

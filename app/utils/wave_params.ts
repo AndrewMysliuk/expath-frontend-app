@@ -30,7 +30,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
   switch (status) {
     case MetricStatusEnum.EXCELLENT:
       return {
-        STROKE: "#16a34a",
+        STROKE: "#16a34a", // emerald-600
         LINE_WIDTH: 1.3,
         SMALL_AMP: 0.08,
         BIG_AMP: 0.2,
@@ -47,7 +47,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     case MetricStatusEnum.GOOD:
       return {
-        STROKE: "#84cc16",
+        STROKE: "#84cc16", // lime-500
         LINE_WIDTH: 1.35,
         SMALL_AMP: 0.1,
         BIG_AMP: 0.22,
@@ -64,7 +64,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     case MetricStatusEnum.MODERATE:
       return {
-        STROKE: "#eab308",
+        STROKE: "#eab308", // yellow-500
         LINE_WIDTH: 1.4,
         SMALL_AMP: 0.12,
         BIG_AMP: 0.24,
@@ -81,7 +81,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     case MetricStatusEnum.WARNING:
       return {
-        STROKE: "#f97316",
+        STROKE: "#f97316", // orange-500
         LINE_WIDTH: 1.45,
         SMALL_AMP: 0.14,
         BIG_AMP: 0.26,
@@ -98,7 +98,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     case MetricStatusEnum.DANGER:
       return {
-        STROKE: "#dc2626",
+        STROKE: "#dc2626", // red-600
         LINE_WIDTH: 1.5,
         SMALL_AMP: 0.16,
         BIG_AMP: 0.28,
@@ -115,7 +115,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     case MetricStatusEnum.CRITICAL:
       return {
-        STROKE: "#991b1b",
+        STROKE: "#991b1b", // red-700
         LINE_WIDTH: 1.6,
         SMALL_AMP: 0.18,
         BIG_AMP: 0.3,
@@ -132,7 +132,7 @@ export function mapStatusToWaveParams(status: MetricStatusEnum): WaveParams {
 
     default:
       return {
-        STROKE: "#9ca3af",
+        STROKE: "#9ca3af", // gray-400
         LINE_WIDTH: 1.2,
         SMALL_AMP: 0.06,
         BIG_AMP: 0.12,
