@@ -25,6 +25,9 @@ export default defineNuxtConfig({
     layoutTransition: false,
 
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       title: "Economic Pulse",
       meta: [
         {
@@ -45,6 +48,8 @@ export default defineNuxtConfig({
         {
           src: "https://kit.fontawesome.com/3e574103a5.js",
           crossorigin: "anonymous",
+          defer: true,
+          async: true,
         },
       ],
     },

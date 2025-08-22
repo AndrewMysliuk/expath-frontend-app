@@ -26,7 +26,7 @@
 <script lang="ts">
 import { defineComponent, computed } from "vue"
 import { useIncomingDataStore } from "@/store"
-import { usePulseRenderer } from "@/composables/usePulseRenderer"
+import { usePulseRenderer } from "@/composables"
 import { MetricStatusEnum } from "@/types"
 
 export default defineComponent({

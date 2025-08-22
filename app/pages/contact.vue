@@ -57,13 +57,17 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue"
-import { TheFooter } from "~/components"
 
 export default defineComponent({
   components: {
-    TheFooter,
+    TheFooter: defineAsyncComponent(() => import("~/components/TheFooter.vue")),
   },
   setup() {
+    useSeoHead({
+      title: "Contact – Economic Pulse",
+      description: "Get in touch with the Economic Pulse team.",
+    })
+
     const config = useRuntimeConfig()
     const endpoint = config.public.contactEndpoint as string
     const form = ref({

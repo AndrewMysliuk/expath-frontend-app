@@ -41,11 +41,19 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import { TheFooter } from "~/components"
 
 export default defineComponent({
   components: {
-    TheFooter,
+    TheFooter: defineAsyncComponent(() => import("~/components/TheFooter.vue")),
+  },
+
+  setup() {
+    useSeoHead({
+      title: "About – Economic Pulse",
+      description: "Learn more about the mission and team behind Economic Pulse.",
+    })
+
+    return {}
   },
 })
 </script>

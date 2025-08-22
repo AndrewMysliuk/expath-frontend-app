@@ -38,5 +38,20 @@ export default defineComponent({
       required: true,
     },
   },
+
+  setup(props) {
+    const title = props.error?.statusCode === 404 ? "Page Not Found – Economic Pulse" : "Error – Economic Pulse"
+    const description =
+      props.error?.statusCode === 404
+        ? "Sorry, the page you’re looking for doesn’t exist."
+        : "An unexpected error occurred. Please try again later."
+
+    useSeoHead({
+      title,
+      description,
+    })
+
+    return {}
+  },
 })
 </script>

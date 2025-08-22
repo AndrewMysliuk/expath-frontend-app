@@ -36,18 +36,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import { PulseIndicator, CountryCard, TheFooter } from "~/components"
-import { useIndexHead } from "~/composables/useIndexHead"
+import { PulseIndicator, CountryCard } from "~/components"
 
 export default defineComponent({
   components: {
     PulseIndicator,
     CountryCard,
-    TheFooter,
+    TheFooter: defineAsyncComponent(() => import("~/components/TheFooter.vue")),
   },
 
   setup() {
-    useIndexHead()
+    useSeoHead()
 
     const search = ref<string>("")
     const countries = [
