@@ -8,7 +8,7 @@
         <h2 class="text-2xl font-bold text-gray-900">Income & Standard of Living</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div
           v-for="(item, index) in MOCK_DATA.income_and_standard_of_living"
           :key="index"
@@ -42,14 +42,6 @@ import { defineComponent } from "vue"
 
 const MOCK_DATA = {
   income_and_standard_of_living: [
-    {
-      title: "Minimum Wage (gross)",
-      from: "",
-      to: "2,200",
-      unit: "€",
-      period: "month",
-      desc: "Legal minimum before taxes",
-    },
     {
       title: "Average Net Salary",
       from: "2,800",

@@ -9,17 +9,9 @@
 
       <IncomeStandardLiving />
 
-      <TaxesConditionsBusiness />
-
       <RealEstate />
 
-      <MigrationOpenness />
-
-      <Infrastructure />
-
       <MacroeconomicIndicators />
-
-      <CurrencyExchangeRates />
 
       <EconomicStructure />
 
@@ -40,12 +32,8 @@ export default defineComponent({
     CountryDetailsSchema: defineAsyncComponent(() => import("~/components/CountryDetails/CountryDetailsSchema.vue")),
     EconomicOverview: defineAsyncComponent(() => import("~/components/CountryDetails/EconomicOverview.vue")),
     IncomeStandardLiving: defineAsyncComponent(() => import("~/components/CountryDetails/IncomeStandardLiving.vue")),
-    TaxesConditionsBusiness: defineAsyncComponent(() => import("~/components/CountryDetails/TaxesConditionsBusiness.vue")),
     RealEstate: defineAsyncComponent(() => import("~/components/CountryDetails/RealEstate.vue")),
-    MigrationOpenness: defineAsyncComponent(() => import("~/components/CountryDetails/MigrationOpenness.vue")),
-    Infrastructure: defineAsyncComponent(() => import("~/components/CountryDetails/Infrastructure.vue")),
     MacroeconomicIndicators: defineAsyncComponent(() => import("~/components/CountryDetails/MacroeconomicIndicators.vue")),
-    CurrencyExchangeRates: defineAsyncComponent(() => import("~/components/CountryDetails/CurrencyExchangeRates.vue")),
     EconomicStructure: defineAsyncComponent(() => import("~/components/CountryDetails/EconomicStructure.vue")),
     SocietyPolitics: defineAsyncComponent(() => import("~/components/CountryDetails/SocietyPolitics.vue")),
     TheFooter: defineAsyncComponent(() => import("~/components/TheFooter.vue")),

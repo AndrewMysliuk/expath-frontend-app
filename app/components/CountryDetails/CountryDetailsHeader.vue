@@ -10,10 +10,6 @@
                 {{ getCountriesData?.country }}
               </h1>
             </div>
-
-            <span class="text-sm text-gray-600 font-medium tracking-wide bg-gray-100 rounded px-2 py-1">
-              {{ MOCK_DATA.header.currency.short }} - {{ MOCK_DATA.header.currency.name }}
-            </span>
           </div>
         </div>
         <div class="text-right">
@@ -100,10 +96,6 @@ import { ScoreStatusEnum } from "~/types"
 
 const MOCK_DATA = {
   header: {
-    currency: {
-      name: "Euro",
-      short: "EUR",
-    },
     last_updated: "2025-08-20",
     score: {
       value: 85,

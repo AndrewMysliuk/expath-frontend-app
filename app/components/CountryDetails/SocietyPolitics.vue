@@ -8,7 +8,7 @@
         <h2 class="text-2xl font-bold text-gray-900">Society & Politics</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div
           v-for="(item, index) in Object.values(MOCK_DATA.society_and_politics)"
           :key="index"
@@ -20,7 +20,7 @@
             </h3>
           </div>
 
-          <p class="text-3xl font-bold mb-1" :class="getStatusClasses(item.title, item.value).text">
+          <p class="text-3xl font-bold mb-1 text-gray-900">
             {{ item.value }}
           </p>
 
@@ -47,11 +47,6 @@ const MOCK_DATA = {
       value: "84 million",
       desc: "Total number of residents in Germany",
     },
-    population_growth: {
-      title: "Population Growth",
-      value: "0.2% YoY",
-      desc: "Annual change in total population",
-    },
     birth_rate: {
       title: "Birth Rate",
       value: "1.4 per woman",
@@ -67,68 +62,13 @@ const MOCK_DATA = {
       value: "High",
       desc: "Stable government, strong democratic institutions, low risk of unrest",
     },
-    urbanization: {
-      title: "Urbanization Level",
-      value: "78%",
-      desc: "Percentage of population living in cities",
-    },
   },
 }
 
 export default defineComponent({
   setup() {
-    const getStatus = (title: string, value: string): string => {
-      if (title === "Population Growth") {
-        const num = parseFloat(value)
-        if (num < 0.1) return "CRITICAT_RISK"
-        if (num < 0.3) return "MODERATE_TENSION"
-        return "STRONG_GROWTH"
-      }
-
-      if (title === "Birth Rate") {
-        const num = parseFloat(value)
-        if (num < 1.3) return "CRITICAT_RISK"
-        if (num < 1.5) return "HIGH_TENSION"
-        return "STABLE"
-      }
-
-      if (title === "Corruption Perception Index") {
-        const num = parseInt(value)
-        if (num < 40) return "CRITICAT_RISK"
-        if (num < 60) return "MODERATE_TENSION"
-        return "STABLE"
-      }
-
-      if (title === "Political Stability & Democracy") {
-        if (value === "High") return "STRONG_GROWTH"
-        return "MODERATE_TENSION"
-      }
-
-      if (title === "Urbanization Level") {
-        const num = parseInt(value)
-        if (num < 60) return "MODERATE_TENSION"
-        return "STABLE"
-      }
-
-      return "STABLE"
-    }
-
-    const statusColorMap = {
-      CRITICAT_RISK: { text: "text-red-700" },
-      HIGH_TENSION: { text: "text-orange-700" },
-      MODERATE_TENSION: { text: "text-yellow-700" },
-      STABLE: { text: "text-green-700" },
-      STRONG_GROWTH: { text: "text-emerald-700" },
-    }
-
-    const getStatusClasses = (title: string, value: string) => {
-      const status = getStatus(title, value)
-      return statusColorMap[status as keyof typeof statusColorMap]
-    }
-
     return {
       MOCK_DATA,
-      getStatusClasses,
     }
   },
 })

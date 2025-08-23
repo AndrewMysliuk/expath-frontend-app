@@ -7,7 +7,7 @@
         </div>
         <h2 class="text-2xl font-bold text-gray-900">Macroeconomic Indicators</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="(item, index) in MOCK_DATA.macroeconomic"
           :key="index"
@@ -64,21 +64,6 @@ const MOCK_DATA = {
       title: "GDP Growth (2025 forecast)",
       value: "0.4%",
       desc: "Expected real GDP growth for 2025",
-    },
-    {
-      title: "GDP per Capita (Nominal)",
-      value: "$55,900",
-      desc: "Annual income per person (US$)",
-    },
-    {
-      title: "Nominal GDP",
-      value: "$4.66T",
-      desc: "Total economic output in USD",
-    },
-    {
-      title: "GDP by PPP",
-      value: "$6.16T",
-      desc: "GDP adjusted by purchasing power parity",
     },
   ],
 }
