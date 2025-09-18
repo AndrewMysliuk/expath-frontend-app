@@ -8,9 +8,6 @@
           <li>
             <router-link to="/contact" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Contact</router-link>
           </li>
-          <li>
-            <router-link to="/library" class="text-gray-600 hover:text-orange-500 transition-colors font-medium">Glossary</router-link>
-          </li>
         </ul>
       </nav>
       <div class="text-center border-t border-gray-200 pt-8">

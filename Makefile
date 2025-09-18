@@ -1,4 +1,4 @@
-IMAGE_NAME=economic-pulse-frontend-app
+IMAGE_NAME=expath-frontend-app
 CONTAINER_NAME=frontend-app-container
 PORT=3000
 

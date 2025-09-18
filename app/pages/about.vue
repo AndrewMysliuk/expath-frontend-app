@@ -3,32 +3,30 @@
     <div class="px-6 py-12">
       <div class="max-w-3xl mx-auto">
         <header class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">About Economic Pulse</h1>
-          <p class="text-lg text-gray-600 max-w-xl mx-auto">
-            A simple, clean, and live dashboard for monitoring key economic trends across the world.
-          </p>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">About Expath</h1>
+          <p class="text-lg text-gray-600 max-w-xl mx-auto">A clear and structured way to explore relocation options worldwide.</p>
         </header>
 
         <section class="space-y-6 text-gray-700 text-base leading-relaxed">
           <p>
-            <strong>Economic Pulse</strong> is a tool for quickly understanding how different countries live and grow. It collects the most
-            important economic signals — like inflation, salaries, taxes, housing prices, and more — and puts them in one clear place.
+            <strong>Expath</strong> is a platform that helps people compare countries side by side. It brings together the essentials of
+            relocation — visas, taxes, cost of living, finance, and quality of life — all in one consistent format.
           </p>
 
           <p>
-            The goal is to keep things simple. No overloaded dashboards or buzzwords — just straight facts, with enough context to make
-            sense even if you’re not an economist.
+            The idea is to remove the noise. No endless forums or scattered guides — just structured information, updated and easy to read,
+            with clear indicators for what’s simple, what’s tricky, and what’s expensive.
           </p>
 
           <p>
-            All data comes from open sources. It’s cleaned, organized, and turned into a snapshot that shows the real picture of a country’s
-            economy, living standards, and direction.
+            Data is pulled from public sources, organized into categories, and turned into a snapshot of each country: how you can move
+            there, how much you’ll pay, and what kind of life to expect.
           </p>
 
-          <p>The project is made and updated by a solo developer. It’s growing step by step, and open to feedback or ideas.</p>
+          <p>The project is built and maintained by a solo developer. It’s evolving step by step and open to feedback and new ideas.</p>
 
           <p>
-            If you have suggestions, ideas for collaboration, or you're interested in advertising — feel free to reach out via the
+            If you’d like to suggest improvements or collaborate, feel free to reach out via the
             <NuxtLink to="/contact" class="text-blue-600 underline hover:opacity-80 transition">contact page</NuxtLink>.
           </p>
         </section>

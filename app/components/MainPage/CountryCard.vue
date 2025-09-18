@@ -65,15 +65,22 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import type { PropType } from "vue"
-import type { ICountryCard } from "~/types"
 
 export default defineComponent({
-  props: {
-    country: {
-      type: Object as PropType<ICountryCard>,
-      required: true,
-    },
+  setup() {
+    const country = {
+      code: "de",
+      slug: "germany",
+      name: "Germany",
+      region: "Europe",
+      trend: "up",
+      score: 85,
+      summary: "Inflation is stable, but business activity remains weak.",
+    }
+
+    return {
+      country,
+    }
   },
 })
 </script>

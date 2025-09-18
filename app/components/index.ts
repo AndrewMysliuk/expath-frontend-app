@@ -1,11 +1,3 @@
-export { default as PulseIndicator } from "./MainPage/PulseIndicator.vue"
 export { default as CountryCard } from "./MainPage/CountryCard.vue"
-export { default as CountryDetailsHeader } from "./CountryDetails/CountryDetailsHeader.vue"
-export { default as CountryDetailsSchema } from "./CountryDetails/CountryDetailsSchema.vue"
-export { default as EconomicOverview } from "./CountryDetails/EconomicOverview.vue"
-export { default as IncomeStandardLiving } from "./CountryDetails/IncomeStandardLiving.vue"
-export { default as RealEstate } from "./CountryDetails/RealEstate.vue"
-export { default as MacroeconomicIndicators } from "./CountryDetails/MacroeconomicIndicators.vue"
-export { default as EconomicStructure } from "./CountryDetails/EconomicStructure.vue"
-export { default as SocietyPolitics } from "./CountryDetails/SocietyPolitics.vue"
+
 export { default as TheFooter } from "./TheFooter.vue"

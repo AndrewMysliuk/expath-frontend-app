@@ -1,11 +1,11 @@
-# Economic Pulse Frontend App
+# Expath Frontend App
 
-A simple and clear indicator of the current state of the global economy.
+An open web interface that helps people explore and compare relocation options across countries.
 
-This project displays an aggregated status — "Economy is growing", "Tension", or "Crisis is approaching" — based on key macroeconomic metrics such as inflation, unemployment, interest rates, PMI, and market trends. Data is updated daily.
+The app provides an interactive world map, searchable country cards, and comparison tools. Each country profile includes residency rules, tax regimes, cost of living, and quality-of-life indicators, all presented in a unified and color-coded format for quick evaluation.
 
 ## Tech Stack
 
-- Nuxt 3 (SSG)
-- TypeScript
+- Vue 3 + TypeScript
+- Vite
 - Tailwind CSS + SCSS

@@ -1,21 +1,8 @@
 <template>
   <div class="min-h-screen bg-white">
-    <CountryDetailsHeader />
-
-    <CountryDetailsSchema />
-
     <main class="max-w-7xl mx-auto px-4 py-12 space-y-10">
-      <EconomicOverview />
-
-      <IncomeStandardLiving />
-
-      <RealEstate />
-
-      <MacroeconomicIndicators />
-
-      <EconomicStructure />
-
-      <SocietyPolitics />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eum necessitatibus dolor quam aperiam deleniti corporis. Minima, animi
+      inventore ratione ad, eius atque nostrum quo laboriosam accusantium vel esse doloribus.
     </main>
 
     <TheFooter />
@@ -24,39 +11,23 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import { useIncomingDataStore } from "~/store"
+// import { useIncomingDataStore } from "~/store"
 
 export default defineComponent({
-  components: {
-    CountryDetailsHeader: defineAsyncComponent(() => import("~/components/CountryDetails/CountryDetailsHeader.vue")),
-    CountryDetailsSchema: defineAsyncComponent(() => import("~/components/CountryDetails/CountryDetailsSchema.vue")),
-    EconomicOverview: defineAsyncComponent(() => import("~/components/CountryDetails/EconomicOverview.vue")),
-    IncomeStandardLiving: defineAsyncComponent(() => import("~/components/CountryDetails/IncomeStandardLiving.vue")),
-    RealEstate: defineAsyncComponent(() => import("~/components/CountryDetails/RealEstate.vue")),
-    MacroeconomicIndicators: defineAsyncComponent(() => import("~/components/CountryDetails/MacroeconomicIndicators.vue")),
-    EconomicStructure: defineAsyncComponent(() => import("~/components/CountryDetails/EconomicStructure.vue")),
-    SocietyPolitics: defineAsyncComponent(() => import("~/components/CountryDetails/SocietyPolitics.vue")),
-    TheFooter: defineAsyncComponent(() => import("~/components/TheFooter.vue")),
-  },
+  components: {},
 
   setup() {
-    const incomingDataStore = useIncomingDataStore()
-    const route = useRoute()
-    const name = route.params.name
-
-    const getCountriesData = computed(() => incomingDataStore.getCountriesData?.find((item) => item.name === name))
+    // const incomingDataStore = useIncomingDataStore()
+    // const route = useRoute()
+    // const name = route.params.name
 
     useHead(() => {
-      const country = getCountriesData.value?.country
-
       return {
-        title: country ? `Economy of ${country} – Economic Pulse` : "Economic Pulse",
+        title: "Economic Pulse",
         meta: [
           {
             name: "description",
-            content: country
-              ? `Explore key economic indicators of ${country}: inflation, interest rates, and more.`
-              : "Explore key economic indicators: inflation, interest rates, and more.",
+            content: "Explore key economic indicators: inflation, interest rates, and more.",
           },
         ],
       }
